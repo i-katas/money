@@ -1,9 +1,10 @@
 - 5USD + 10CHF = 10USD if CHF:USD = 2:1
+- # 5CHF * 2 = 10CHF
 - Money rounding?
 - equals(null)
 - equals(object)
 - hashCode()?
-- ~~make `amount` private?~~
 - ~~5USD * 2 = 10USD~~
 - ~~Dollar side-effects?~~
 - ~~equals()?~~
+- ~~make `amount` private?~~

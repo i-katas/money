@@ -15,6 +15,14 @@ public class MoneyTest {
   }
 
   @Test
+  public void francMultiplication() throws Throwable {
+    Franc five = new Franc(5);
+
+    assertThat(five.times(2), equalTo(new Franc(10)));
+    assertThat(five.times(3), equalTo(new Franc(15)));
+  }
+
+  @Test
   public void equality() throws Throwable {
     assertThat(new Dollar(5), equalTo(new Dollar(5)));
     assertThat(new Dollar(5), not(equalTo(new Dollar(6))));
