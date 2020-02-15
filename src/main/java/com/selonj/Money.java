@@ -1,6 +1,6 @@
 package com.selonj;
 
-public abstract class Money {
+public class Money {
   protected int amount;
   protected String currency;
 
@@ -17,7 +17,9 @@ public abstract class Money {
     return new Franc(amount, "CHF");
   }
 
-  abstract Money times(int multiplier);
+  Money times(int multiplier) {
+    return null;
+  }
 
   String currency() {
     return currency;
@@ -26,5 +28,9 @@ public abstract class Money {
   public boolean equals(Object o) {
     Money that = (Money) o;
     return this.amount == that.amount && this.getClass() == that.getClass();
+  }
+
+  public String toString() {
+    return amount + currency();
   }
 }
