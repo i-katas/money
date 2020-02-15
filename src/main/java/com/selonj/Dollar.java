@@ -1,7 +1,7 @@
 package com.selonj;
 
 public class Dollar {
-  final int amount;
+  private final int amount;
 
   Dollar(int amount) {
     this.amount = amount;

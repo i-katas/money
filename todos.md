@@ -3,7 +3,7 @@
 - equals(null)
 - equals(object)
 - hashCode()?
-- # make `amount` private?
+- ~~make `amount` private?~~
 - ~~5USD * 2 = 10USD~~
 - ~~Dollar side-effects?~~
 - ~~equals()?~~
