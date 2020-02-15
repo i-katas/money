@@ -37,4 +37,9 @@ public class MoneyTest {
     assertThat(Money.franc(5).currency(), equalTo("CHF"));
     
   }
+
+  @Test
+  public void differentClassEquality() throws Throwable {
+    assertThat(new Franc(5, "CHF"), equalTo(new Money(5, "CHF")));
+  }
 }
