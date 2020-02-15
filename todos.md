@@ -1,6 +1,6 @@
 - 5USD + 10CHF = 10USD if CHF:USD = 2:1
 - Dollar/Franc duplication
-- Common equals
+- # Common equals
 - ~~5CHF * 2 = 10CHF~~
 - Money rounding?
 - equals(null)

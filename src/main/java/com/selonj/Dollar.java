@@ -1,7 +1,6 @@
 package com.selonj;
 
-public class Dollar {
-  private final int amount;
+public class Dollar extends Money {
 
   Dollar(int amount) {
     this.amount = amount;
@@ -11,8 +10,4 @@ public class Dollar {
     return new Dollar(this.amount * multiplier);
   }
 
-  public boolean equals(Object o) {
-    Dollar that = (Dollar) o;
-    return this.amount == that.amount;
-  }
 }
