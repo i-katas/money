@@ -1,0 +1,2 @@
+- 5USD + 10CHF = 10USD if CHF:USD = 2:1
+- 5USD * 2 = 10USD
