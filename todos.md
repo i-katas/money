@@ -1,6 +1,6 @@
 - 5USD + 10CHF = 10USD if CHF:USD = 2:1
 - ~~Currency?~~
-- Dollar/Franc duplication
+- # Dollar/Franc duplication
 - ~~Common times~~
 - delete francMultiplication()?
 - Money rounding?
