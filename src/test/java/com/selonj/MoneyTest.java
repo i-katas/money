@@ -9,10 +9,10 @@ public class MoneyTest {
   public void multiplication() throws Throwable {
     Dollar five = new Dollar(5);
 
-    five.times(2);
-    assertThat(five.amount, equalTo(10));
+    Dollar product = five.times(2);
+    assertThat(product.amount, equalTo(10));
 
-    five.times(3);
-    assertThat(five.amount, equalTo(15));
+    product = five.times(3);
+    assertThat(product.amount, equalTo(15));
   }
 }
