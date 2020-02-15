@@ -3,5 +3,5 @@
 - make `amount` private?
 - ~~Dollar side-effects?~~
 - Money rounding?
-- equals()?
+- # equals()?
 - hashCode()?

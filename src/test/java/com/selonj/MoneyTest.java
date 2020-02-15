@@ -15,4 +15,9 @@ public class MoneyTest {
     product = five.times(3);
     assertThat(product.amount, equalTo(15));
   }
+
+  @Test
+  public void equality() throws Throwable {
+    assertThat(new Dollar(5), equalTo(new Dollar(5)));
+  }
 }
