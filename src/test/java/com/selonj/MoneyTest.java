@@ -11,10 +11,10 @@ public class MoneyTest {
     Dollar five = new Dollar(5);
 
     Dollar product = five.times(2);
-    assertThat(product.amount, equalTo(10));
+    assertThat(product, equalTo(new Dollar(10)));
 
     product = five.times(3);
-    assertThat(product.amount, equalTo(15));
+    assertThat(product, equalTo(new Dollar(15)));
   }
 
   @Test
