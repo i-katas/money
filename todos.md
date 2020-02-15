@@ -2,6 +2,7 @@
 - Dollar/Franc duplication
 - ~~Common equals~~
 - ~~Dollar != Franc~~
+- Currency?
 - ~~5CHF * 2 = 10CHF~~
 - Money rounding?
 - equals(null)
