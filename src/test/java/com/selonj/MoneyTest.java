@@ -30,4 +30,11 @@ public class MoneyTest {
     assertThat(Money.franc(5), not(equalTo(Money.franc(6))));
     assertThat(Money.dollar(5), not(equalTo(Money.franc(5))));
   }
+
+  @Test
+  public void currency() throws Throwable {
+    assertThat(Money.dollar(5).currency(), equalTo("USD"));
+    assertThat(Money.franc(5).currency(), equalTo("CHF"));
+    
+  }
 }
