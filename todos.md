@@ -2,6 +2,7 @@
 - Currency?
 - Dollar/Franc duplication
 - Common times
+- delete francMultiplication()?
 - Money rounding?
 - equals(null)
 - equals(object)

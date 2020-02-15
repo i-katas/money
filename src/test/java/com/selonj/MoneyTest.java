@@ -8,26 +8,26 @@ import static org.hamcrest.Matchers.not;
 public class MoneyTest {
   @Test
   public void multiplication() throws Throwable {
-    Dollar five = new Dollar(5);
+    Money five = Money.dollar(5);
 
-    assertThat(five.times(2), equalTo(new Dollar(10)));
-    assertThat(five.times(3), equalTo(new Dollar(15)));
+    assertThat(five.times(2), equalTo(Money.dollar(10)));
+    assertThat(five.times(3), equalTo(Money.dollar(15)));
   }
 
   @Test
   public void francMultiplication() throws Throwable {
-    Franc five = new Franc(5);
+    Money five = Money.franc(5);
 
-    assertThat(five.times(2), equalTo(new Franc(10)));
-    assertThat(five.times(3), equalTo(new Franc(15)));
+    assertThat(five.times(2), equalTo(Money.franc(10)));
+    assertThat(five.times(3), equalTo(Money.franc(15)));
   }
 
   @Test
   public void equality() throws Throwable {
-    assertThat(new Dollar(5), equalTo(new Dollar(5)));
-    assertThat(new Dollar(5), not(equalTo(new Dollar(6))));
-    assertThat(new Franc(5), equalTo(new Franc(5)));
-    assertThat(new Franc(5), not(equalTo(new Franc(6))));
-    assertThat(new Dollar(5), not(equalTo(new Franc(5))));
+    assertThat(Money.dollar(5), equalTo(Money.dollar(5)));
+    assertThat(Money.dollar(5), not(equalTo(Money.dollar(6))));
+    assertThat(Money.franc(5), equalTo(Money.franc(5)));
+    assertThat(Money.franc(5), not(equalTo(Money.franc(6))));
+    assertThat(Money.dollar(5), not(equalTo(Money.franc(5))));
   }
 }
