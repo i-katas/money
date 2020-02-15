@@ -2,13 +2,13 @@ package com.selonj;
 
 public class Franc extends Money {
 
-  Franc(int amount) {
+  Franc(int amount, String currency) {
     this.amount = amount;
-    this.currency = "CHF";
+    this.currency = currency;
   }
 
   Money times(int multiplier) {
-    return new Franc(this.amount * multiplier);
+    return franc(this.amount * multiplier);
   }
 
 }
