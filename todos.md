@@ -1,5 +1,5 @@
 - 5USD + 10CHF = 10USD if CHF:USD = 2:1
 - ~~5USD * 2 = 10USD~~
 - make `amount` private?
-- Dollar side-effects?
+- # Dollar side-effects?
 - Money rounding?
