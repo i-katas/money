@@ -1,6 +1,7 @@
 - 5USD + 10CHF = 10USD if CHF:USD = 2:1
 - ~~5USD + 5USD = 10USD~~
-- Bank.reduce(Money)
+- ~~Bank.reduce(Money)~~
+- Reduce Money with conversion
 - return Money from 5USD + 5USD?
 - Money rounding?
 - equals(null)
