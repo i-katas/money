@@ -1,23 +1,23 @@
-- ~~5USD + 10CHF = 10USD if CHF:USD = 2:1~~
-- ~~Expression.plus~~
-- ~~Sum.plus~~
-- ~~Expression.times~~
-- ~~5USD + 5USD = 10USD~~
-- ~~Bank.reduce(Money)~~
-- ~~Reduce Money with conversion~~
-- return Money from 5USD + 5USD?
 - Money rounding?
 - equals(null)
 - equals(object)
 - hashCode()?
+- ~~return Money from 5USD + 5USD?~~
 - ~~5CHF * 2 = 10CHF~~
 - ~~5USD * 2 = 10USD~~
+- ~~5USD + 10CHF = 10USD if CHF:USD = 2:1~~
+- ~~5USD + 5USD = 10USD~~
+- ~~Bank.reduce(Money)~~
 - ~~Common equals~~
 - ~~Common times~~
 - ~~Currency?~~
 - ~~Dollar != Franc~~
 - ~~Dollar side-effects?~~
 - ~~Dollar/Franc duplication~~
+- ~~Expression.plus~~
+- ~~Expression.times~~
+- ~~Reduce Money with conversion~~
+- ~~Sum.plus~~
 - ~~delete francMultiplication()?~~
 - ~~equals()?~~
 - ~~make `amount` private?~~

@@ -28,14 +28,13 @@ public class MoneyTest {
 
     Expression sum = five.plus(five);
 
-    Money reduced = bank.reduce(sum, "USD");
-    assertThat(reduced, equalTo(Money.dollar(10)));
+    assertThat(sum, equalTo(Money.dollar(10)));
   }
 
   @Test
   public void plusDifferentCurrency() throws Throwable {
-    Expression fiveBucks = Money.dollar(5);
-    Expression tenFrancs = Money.franc(10);
+    Money fiveBucks = Money.dollar(5);
+    Money tenFrancs = Money.franc(10);
 
     Expression sum = fiveBucks.plus(tenFrancs);
 
