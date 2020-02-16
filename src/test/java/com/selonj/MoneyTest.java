@@ -34,8 +34,8 @@ public class MoneyTest {
 
   @Test
   public void plusDifferentCurrency() throws Throwable {
-    Money fiveBucks = Money.dollar(5);
-    Money tenFrancs = Money.franc(10);
+    Expression fiveBucks = Money.dollar(5);
+    Expression tenFrancs = Money.franc(10);
 
     Expression sum = fiveBucks.plus(tenFrancs);
 
