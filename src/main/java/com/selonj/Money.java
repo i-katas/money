@@ -17,6 +17,10 @@ public class Money {
     return new Money(amount, "CHF");
   }
 
+  Money plus(Money addend) {
+    return new Money(this.amount + addend.amount, currency());
+  }
+
   Money times(int multiplier) {
     return new Money(this.amount * multiplier, currency());
   }

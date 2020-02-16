@@ -1,8 +1,5 @@
 - 5USD + 10CHF = 10USD if CHF:USD = 2:1
-- ~~Currency?~~
-- ~~Dollar/Franc duplication~~
-- ~~Common times~~
-- ~~delete francMultiplication()?~~
+- # 5USD + 5USD = 10USD
 - Money rounding?
 - equals(null)
 - equals(object)
@@ -10,7 +7,11 @@
 - ~~5CHF * 2 = 10CHF~~
 - ~~5USD * 2 = 10USD~~
 - ~~Common equals~~
+- ~~Common times~~
+- ~~Currency?~~
 - ~~Dollar != Franc~~
 - ~~Dollar side-effects?~~
+- ~~Dollar/Franc duplication~~
+- ~~delete francMultiplication()?~~
 - ~~equals()?~~
 - ~~make `amount` private?~~

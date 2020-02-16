@@ -15,6 +15,15 @@ public class MoneyTest {
   }
 
   @Test
+  public void plusSameCurrency() throws Throwable {
+    Money five = Money.dollar(5);
+
+    Money sum = five.plus(five);
+
+    assertThat(sum, equalTo(Money.dollar(10)));
+  }
+
+  @Test
   public void equality() throws Throwable {
     assertThat(Money.dollar(5), equalTo(Money.dollar(5)));
     assertThat(Money.dollar(5), not(equalTo(Money.dollar(6))));
