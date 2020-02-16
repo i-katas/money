@@ -65,6 +65,8 @@ public class MoneyTest {
     assertThat(Money.dollar(5), equalTo(Money.dollar(5)));
     assertThat(Money.dollar(5), not(equalTo(Money.dollar(6))));
     assertThat(Money.dollar(5), not(equalTo(Money.franc(5))));
+    assertThat(Money.dollar(5), not(equalTo(null)));
+    assertThat(Money.dollar(5), not(equalTo(5)));
   }
 
   @Test

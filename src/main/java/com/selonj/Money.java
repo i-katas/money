@@ -38,8 +38,11 @@ public final class Money implements Expression {
   }
 
   public boolean equals(Object o) {
+    if(!(o instanceof Money)) {
+      return false;
+    }
     Money that = (Money) o;
-    return this.amount == that.amount && this.currency().equals(that.currency());
+    return this == that || this.amount == that.amount && this.currency().equals(that.currency());
   }
 
   public String toString() {

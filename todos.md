@@ -1,6 +1,6 @@
 - Money rounding?
-- equals(null)
-- equals(object)
+- ~~equals(null)~~
+- ~~equals(object)~~
 - hashCode()?
 - ~~return Money from 5USD + 5USD?~~
 - ~~5CHF * 2 = 10CHF~~
