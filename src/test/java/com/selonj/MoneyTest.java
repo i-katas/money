@@ -36,6 +36,17 @@ public class MoneyTest {
   }
 
   @Test
+  public void reduceToDifferentCurrency() throws Throwable {
+    Money twoFrancs = Money.franc(2);
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+
+    Money reduced = bank.reduce(twoFrancs, "USD");
+
+    assertThat(reduced, equalTo(Money.dollar(1)));
+  }
+
+  @Test
   public void equality() throws Throwable {
     assertThat(Money.dollar(5), equalTo(Money.dollar(5)));
     assertThat(Money.dollar(5), not(equalTo(Money.dollar(6))));
