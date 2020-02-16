@@ -17,10 +17,6 @@ public class Money implements Expression {
     return new Money(amount, "CHF");
   }
 
-  public Expression plus(Expression addend) {
-    return new Sum(this, addend);
-  }
-
   Money times(int multiplier) {
     return new Money(this.amount * multiplier, currency());
   }
