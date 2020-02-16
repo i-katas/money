@@ -26,17 +26,6 @@ public class MoneyTest {
   }
 
   @Test
-  public void plusReturnSum() throws Throwable {
-    Money five = Money.dollar(5);
-    Money one = Money.dollar(1);
-
-    Sum sum = (Sum) five.plus(one);
-
-    assertThat(sum.augend, equalTo(five));
-    assertThat(sum.addend, equalTo(one));
-  }
-
-  @Test
   public void equality() throws Throwable {
     assertThat(Money.dollar(5), equalTo(Money.dollar(5)));
     assertThat(Money.dollar(5), not(equalTo(Money.dollar(6))));
