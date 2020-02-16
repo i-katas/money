@@ -45,6 +45,10 @@ public final class Money implements Expression {
     return this == that || this.amount == that.amount && this.currency().equals(that.currency());
   }
 
+  public int hashCode() {
+    return amount * 31 + currency().hashCode();
+  }
+
   public String toString() {
     return amount + currency();
   }

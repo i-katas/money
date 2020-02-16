@@ -70,6 +70,13 @@ public class MoneyTest {
   }
 
   @Test
+  public void hash() throws Throwable {
+    assertThat(Money.dollar(5).hashCode(), equalTo(Money.dollar(5).hashCode()));
+    assertThat(Money.dollar(5).hashCode(), not(equalTo(Money.dollar(6).hashCode())));
+    assertThat(Money.dollar(5).hashCode(), not(equalTo(Money.franc(5).hashCode())));
+  }
+
+  @Test
   public void currency() throws Throwable {
     assertThat(Money.dollar(5).currency(), equalTo("USD"));
     assertThat(Money.franc(5).currency(), equalTo("CHF"));
