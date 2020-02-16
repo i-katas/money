@@ -25,4 +25,16 @@ public class SumTest {
     Money reduced = bank.reduce(result, "USD");
     assertThat(reduced, equalTo(Money.dollar(8)));
   }
+
+  @Test
+  public void multiplySumOfSameCurrency() throws Throwable {
+    Sum sum = new Sum(Money.dollar(3), Money.dollar(4));
+    Bank bank = new Bank();
+
+    Expression result = sum.times(2);
+
+    Money reduced = bank.reduce(result, "USD");
+    assertThat(reduced, equalTo(Money.dollar(14)));
+  }
+
 }

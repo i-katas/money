@@ -5,5 +5,7 @@ public interface Expression {
     return new Sum(this, addend);
   }
 
+  Expression times(int multiplier);
+
   Money reduce(Bank bank, String to);
 }
