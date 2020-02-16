@@ -26,6 +26,19 @@ public class MoneyTest {
   }
 
   @Test
+  public void plusDifferentCurrency() throws Throwable {
+    Money fiveBucks = Money.dollar(5);
+    Money tenFrancs = Money.franc(10);
+    Bank bank = new Bank();
+    bank.addRate("CHF", "USD", 2);
+
+    Expression sum = fiveBucks.plus(tenFrancs);
+
+    Money reduced = bank.reduce(sum, "USD");
+    assertThat(reduced, equalTo(Money.dollar(10)));
+  }
+
+  @Test
   public void reduceToSameCurrency() throws Throwable {
     Money five = Money.dollar(5);
     Bank bank = new Bank();
