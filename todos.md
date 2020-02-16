@@ -1,6 +1,6 @@
 - ~~5USD + 10CHF = 10USD if CHF:USD = 2:1~~
 - ~~Expression.plus~~
-- Sum.plus
+- # Sum.plus
 - Expression.times
 - ~~5USD + 5USD = 10USD~~
 - ~~Bank.reduce(Money)~~
