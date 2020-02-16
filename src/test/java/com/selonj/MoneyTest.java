@@ -17,10 +17,12 @@ public class MoneyTest {
   @Test
   public void plusSameCurrency() throws Throwable {
     Money five = Money.dollar(5);
+    Bank bank = new Bank();
 
-    Money sum = five.plus(five);
+    Expression sum = five.plus(five);
 
-    assertThat(sum, equalTo(Money.dollar(10)));
+    Money reduced = bank.reduce(sum, "USD");
+    assertThat(reduced, equalTo(Money.dollar(10)));
   }
 
   @Test
