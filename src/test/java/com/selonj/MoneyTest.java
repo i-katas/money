@@ -1,11 +1,19 @@
 package com.selonj;
 
 import org.junit.Test;
+import org.junit.Before;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.not;
 
 public class MoneyTest {
+  private final Bank bank = new Bank();
+
+  @Before
+  public void registerExchangeRates() throws Throwable {
+    bank.addRate("CHF", "USD", 2);
+  }
+
   @Test
   public void multiplication() throws Throwable {
     Money five = Money.dollar(5);
@@ -17,7 +25,6 @@ public class MoneyTest {
   @Test
   public void plusSameCurrency() throws Throwable {
     Money five = Money.dollar(5);
-    Bank bank = new Bank();
 
     Expression sum = five.plus(five);
 
@@ -29,8 +36,6 @@ public class MoneyTest {
   public void plusDifferentCurrency() throws Throwable {
     Money fiveBucks = Money.dollar(5);
     Money tenFrancs = Money.franc(10);
-    Bank bank = new Bank();
-    bank.addRate("CHF", "USD", 2);
 
     Expression sum = fiveBucks.plus(tenFrancs);
 
@@ -41,7 +46,6 @@ public class MoneyTest {
   @Test
   public void reduceToSameCurrency() throws Throwable {
     Money five = Money.dollar(5);
-    Bank bank = new Bank();
 
     Money reduced = bank.reduce(five, "USD");
 
@@ -51,8 +55,6 @@ public class MoneyTest {
   @Test
   public void reduceToDifferentCurrency() throws Throwable {
     Money twoFrancs = Money.franc(2);
-    Bank bank = new Bank();
-    bank.addRate("CHF", "USD", 2);
 
     Money reduced = bank.reduce(twoFrancs, "USD");
 
