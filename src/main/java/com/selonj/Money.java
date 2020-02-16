@@ -1,8 +1,8 @@
 package com.selonj;
 
-public class Money implements Expression {
-  protected int amount;
-  protected String currency;
+public final class Money implements Expression {
+  private final int amount;
+  private final String currency;
 
   public Money(int amount, String currency) {
     this.amount = amount;
